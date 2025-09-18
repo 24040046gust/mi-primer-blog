@@ -1,0 +1,127 @@
+        /* --- Paleta de Colores Pastel --- */
+        :root {
+            --bg-start: #f5e6ff; /* Rosa pastel muy claro */
+            --bg-end: #dbe9ff;   /* Azul pastel muy claro */
+            --card-bg: #ffffff;
+            --primary-text: #5b5b7c; /* Gris violáceo oscuro */
+            --heading-color: #a388e1; /* Lavanda para acentos */
+            --shadow-color: rgba(163, 136, 225, 0.2); /* Sombra color lavanda */
+            --icon-bg: #f7f5ff; /* Fondo muy claro para íconos */
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: var(--bg-start);
+            background-image: linear-gradient(135deg, var(--bg-start), var(--bg-end));
+            color: var(--primary-text);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* --- Tarjeta Principal --- */
+        .card {
+            background-color: var(--card-bg);
+            padding: 40px 50px;
+            border-radius: 25px; /* Bordes más redondeados */
+            box-shadow: 0 10px 30px var(--shadow-color);
+            max-width: 650px;
+            width: 100%;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            /* Animación suave de entrada */
+            animation: popIn 0.8s ease-out;
+        }
+
+        @keyframes popIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* --- Tipografía y Títulos --- */
+        h1 {
+            font-size: 2.8em;
+            font-weight: 700;
+            color: var(--heading-color);
+            margin-bottom: 5px;
+        }
+
+        p i {
+            color: #9a9ab8; /* Un poco más claro que el texto principal */
+            font-size: 1.1em;
+            margin-bottom: 40px;
+            display: block;
+        }
+
+        h3 {
+            color: var(--primary-text);
+            font-weight: 700;
+            border-bottom: 1px solid #e9e9f3;
+            padding-bottom: 10px;
+            margin-top: 50px;
+            margin-bottom: 25px;
+        }
+
+        /* --- Secciones de Íconos --- */
+        .icon-section {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .icon-container {
+            background-color: var(--icon-bg);
+            border-radius: 50%;
+            padding: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease-out;
+            border: 1px solid #ede8ff;
+        }
+
+        .icon-container:hover {
+            transform: translateY(-6px); /* Efecto de levantar */
+            box-shadow: 0 8px 20px var(--shadow-color);
+            background-color: #fff;
+        }
+        
+        .icon-container img {
+            width: 50px;
+            height: 50px;
+        }
+        
+        .hobbies img {
+             cursor: pointer;
+        }
+
+        /* --- Botón Estilo Soft --- */
+        button {
+            background-color: var(--heading-color);
+            color: white;
+            border: none;
+            padding: 15px 35px;
+            font-size: 16px;
+            font-weight: bold;
+            font-family: 'Nunito', sans-serif;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease-out;
+            margin-top: 20px;
+            box-shadow: 0 4px 15px var(--shadow-color);
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            background-color: #b197e8; /* Un tono de lavanda ligeramente más oscuro */
+            box-shadow: 0 6px 20px var(--shadow-color); }
